@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,300;0,900;1,900&family=Oswald:wght@700&display=swap"
+    rel="stylesheet"
+  >
+  <link
+    rel="stylesheet"
+    href="./css/main.css"
+  >
+  <title>Los Angeles Mountains || Home</title>
+</head>
+
+<body>
+  <section class="hero-section">
+    <header class="hero-section__header">
+      <img
+        src="./images/Logo.png"
+        alt="logo"
+        class="hero-section__logo"
+        width="30"
+        height="30"
+      >
+      <ul class="hero-section__header__links-container navigation-links-list">
+        <li class="navigation-links-item">
+          <a
+            class="navigation-links"
+            href="#history"
+          >01. History</a>
+        </li>
+        <li class="navigation-links-item">
+          <a
+            class="navigation-links"
+            href="#team"
+          >02. Team</a>
+        </li>
+      </ul>
+    </header>
+    <h1 class="headline-text"><span>LosAngeles</span><span>Mountains</span></h1>
+  </section>
+  <header class="site-header">
+    <div class="site-header__main-logo">
+      <img
+        src="./images/Logo.png"
+        alt="logo"
+        class="hero-section__logo"
+        width="30"
+        height="30"
+      >
+      <p class="headline-text"><span>LosAngeles</span><span>Mountains</span></p>
+    </div>
+    <ul class="site-header__links-container navigation-links-list">
+      <li class="navigation-links-item">
+        <a
+          class="navigation-links"
+          href="#history"
+        >01. History</a>
+      </li>
+      <li class="navigation-links-item">
+        <a
+          class="navigation-links"
+          href="#team"
+        >02. Team</a>
+      </li>
+    </ul>
+  </header>
+  <main>
+    <section
+      class="section history-section"
+      id="history"
+    >
+      <h2><span class="section-number">01</span> <span class="section-title">History</span></h2>
+      <p class="section-text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in ante viverra, rutrum erat rutrum, consectetur
+        mi.
+        Proin at maximus est. Nullam purus ex, iaculis sed erat sed, blandit tincidunt quam. Cras scelerisque id quam
+        sed
+        dignissim Pellentesque urna nunc, gravida quis hendrerit ac, tristique ut quam. Vivamus suscipit dignissim
+        tortor
+        nec
+        congue.
+      </p>
+    </section>
+    <section
+      class="section team-section"
+      id="team"
+    >
+      <header class="team-section__header">
+        <h2><span class="section-number">02</span> <span class="section-title">Climb</span></h2>
+        <p class="section-text">
+          Cras scelerisque id quam sed dignissim Pellentesque urna nunc, gravida quis hendrerit ac, tristique ut quam.
+          Vivamus
+          suscipit dignissim tortor nec congue.
+        </p>
+      </header>
+      <div class="team-section__accordion-container">
+        <div class="team-section__accordion-tab-container">
+          <button
+            id="mountain1_button"
+            class="team-section__accordion-tab active"
+            aria-controls="mountain1_panel"
+          >Mountain 1</button><button
+            id="mountain2_button"
+            class="team-section__accordion-tab"
+            aria-controls="mountain2_panel"
+          >Mountain 2</button>
+        </div>
+        <div class="team-section__accordion-panel-container">
+          <img
+            src="./images/team_mountain_1.png"
+            alt=""
+            class="team-section__accordion-panel active"
+            id="mountain1_panel"
+            aria-labelledby="mountain1_button"
+          ><img
+            src="./images/team_mountain_2.png"
+            alt=""
+            class="team-section__accordion-panel"
+            id="mountain2_panel"
+            aria-labelledby="mountain2_button"
+          >
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="site-header__main-logo">
+      <img
+        src="./images/Logo.png"
+        alt="logo"
+        class="hero-section__logo"
+        width="30"
+        height="30"
+      >
+      <p class="headline-text"><span>LosAngeles</span><span>Mountains</span></p>
+    </div>
+    <p class="copyright-info">Copyright 2016. All Rights Reserved</p>
+  </footer>
+
+  <script src="./js/scripts.js"></script>
+</body>
+
+</html>
