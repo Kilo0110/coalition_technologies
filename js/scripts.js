@@ -27,22 +27,26 @@ accordionTabControlsList.forEach((tabControl) => {
 
       // Fallback for browsers that don't support View Transitions:
       if (!document.startViewTransition) {
+        // Remove the active class from any previously active tab panel
         accordionTabPanelsList
           .filter((panel) => panel.id !== targetTabPanelID)[0]
           .classList.remove('active');
+
+        // Add the active class to the target tab panel
         targetTabPanel.classList.add('active');
         return;
       }
 
       // With View Transitions:
       document.startViewTransition(() => {
+        // Remove the active class from any previously active tab panel
         accordionTabPanelsList
           .filter((panel) => panel.id !== targetTabPanelID)[0]
           .classList.remove('active');
+
+        // Add the active class to the target tab panel
         targetTabPanel.classList.add('active');
       });
-
-      console.log(targetTabPanel);
     }
   });
 });

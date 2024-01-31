@@ -19,6 +19,11 @@
 body {
   --body-padding: 2em;
 
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: stretch;
+
   @media screen and (min-width: 600px) {
     --body-padding: 6em;
   }
@@ -60,7 +65,7 @@ body {
   }
 
   span:last-of-type {
-    color: #41456b;
+    color: #414f6b;
   }
 }
 
@@ -159,7 +164,7 @@ body {
       content: '';
       width: 15px;
       height: 12px;
-      background-color: #41456b;
+      background-color: #414f6b;
       position: absolute;
       bottom: -12px;
       left: 0;
@@ -188,8 +193,15 @@ body {
   &__header {
     padding-inline: var(--body-padding);
     display: flex;
+    flex-direction: column;
+    padding-bottom: 2em;
     align-items: center;
     justify-content: space-between;
+
+    @media screen and (min-width: 600px) {
+      flex-direction: row;
+      padding-bottom: unset;
+    }
   }
 
   .section-text {
@@ -244,13 +256,70 @@ body {
 
   &__accordion-panel {
     width: 100%;
-    height: 500px;
-    object-fit: cover;
+    height: 70vh;
     display: none;
 
     &.active {
       display: block;
     }
+  }
+
+  #mountain1_panel {
+    background: url('../images/team_mountain_1.png') top center / cover;
+    position: relative;
+
+    .schedule-information {
+      position: absolute;
+      top: 10em;
+      left: 2em;
+      background-color: rgba($color: #fff, $alpha: .6);
+      backdrop-filter: blur(3px);
+      padding: 2em 2.5em;
+
+      @media screen and (min-width: 600px) {
+        left: 7em;
+      }
+
+      @media screen and (min-width: 900px) {
+        left: 10em;
+      }
+
+      @media screen and (min-width: 900px) {
+        left: 14em;
+        top: 5em;
+      }
+
+      h3 {
+        font-family: var(--numbering-font);
+        font-size: clamp(20px, 20px + 1vw, 50px);
+        text-transform: uppercase;
+        margin: 0;
+        margin-bottom: .5em;
+        color: #414f6b;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+      }
+
+      li {
+        display: flex;
+        align-items: center;
+        gap: 1em;
+        font-family: var(--link-font);
+        font-size: clamp(10px, 12px + 1vw, 16px);
+      }
+    }
+  }
+
+  #mountain2_panel {
+    background: url('../images/team_mountain_2.png') center / cover;
+
+
   }
 }
 
@@ -260,6 +329,7 @@ body {
   align-items: center;
   justify-content: space-between;
   background-color: #414f6b;
+  margin-top: auto;
 
   .copyright-info {
     font-family: var(--link-font);
